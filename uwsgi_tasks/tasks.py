@@ -10,7 +10,6 @@ from contextlib import contextmanager
 from datetime import datetime, timedelta
 
 import os
-import six
 import warnings
 from uwsgi_tasks.utils import (
     import_by_path,
@@ -19,11 +18,7 @@ from uwsgi_tasks.utils import (
 )
 
 
-try:
-    # noinspection PyPep8Naming
-    from six.moves import cPickle as pickle
-except ImportError:
-    import pickle
+import pickle
 
 
 try:

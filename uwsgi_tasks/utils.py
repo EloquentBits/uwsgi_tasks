@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import six
 from importlib import import_module
 
 
@@ -36,7 +35,7 @@ def get_function_path(function):
     """Get received function path (as string), to import function later
     with `import_string`.
     """
-    if isinstance(function, six.string_types):
+    if isinstance(function, (str,)):
         return function
 
     func_path = []
